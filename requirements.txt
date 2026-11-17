@@ -7,7 +7,5 @@ joblib
 matplotlib
 pyyaml
 tqdm
-ipykernel
 streamlit
-# opsional: demo Gradio di notebook (RUN_GRADIO_DEMO = True) dan SIFT (sudah ada di opencv-python >= 4.4)
-# gradio
+plotly
