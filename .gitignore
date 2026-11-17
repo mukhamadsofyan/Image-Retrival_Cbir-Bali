@@ -1,0 +1,4 @@
+.venv/
+__pycache__/
+dataset/
+cbir_topeng_output/

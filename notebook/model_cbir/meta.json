@@ -1,0 +1,114 @@
+{
+  "format_version": 1,
+  "created": "2026-11-17T13:43:08",
+  "n_gallery": 4362,
+  "classes": [
+    "Topeng Barong Bangkung",
+    "Topeng Barong Ket",
+    "Topeng Barong Macan",
+    "Topeng Bujuh",
+    "Topeng Dalem Arsa Wijaya",
+    "Topeng Jauk Keras",
+    "Topeng Jauk Manis",
+    "Topeng Keras",
+    "Topeng Penasar",
+    "Topeng Sidakarya",
+    "Topeng Telek",
+    "Topeng Tua",
+    "Topeng Wijil"
+  ],
+  "unit_mode": "image",
+  "random_seed": 42,
+  "default_scenario": "s2b_praproses_otomatis",
+  "features": {
+    "IMAGE_SIZE": [
+      128,
+      128
+    ],
+    "SEG_MAX_SIDE": 160,
+    "HSV_BINS": [
+      16,
+      4,
+      4
+    ],
+    "HOG_ORIENTATIONS": 9,
+    "HOG_PIXELS_PER_CELL": [
+      16,
+      16
+    ],
+    "HOG_CELLS_PER_BLOCK": [
+      2,
+      2
+    ],
+    "LBP_P": 8,
+    "LBP_R": 1,
+    "LBP_GRID": [
+      2,
+      2
+    ],
+    "LBP_BINS_PER_CELL": 59
+  },
+  "rocchio": {
+    "alpha": 1.0,
+    "beta": 0.75,
+    "gamma": 0.15
+  },
+  "scenarios": {
+    "s2b_praproses_otomatis": {
+      "norm_mode": "centered+zscore",
+      "zscore": true,
+      "weights": {
+        "w1": {
+          "hsv": 0.3,
+          "hog": 0.7,
+          "hu": 0.0
+        },
+        "w2": {
+          "hsv": 0.3,
+          "hog": 0.7,
+          "hu": 0.0,
+          "lbp": 0.0
+        },
+        "w2m": {
+          "hsv": 0.2,
+          "hog": 0.6,
+          "hu": 0.1,
+          "lbp": 0.1
+        }
+      },
+      "val_mAP_strict": {
+        "model1": 31.156188562807287,
+        "model2": 31.156188562807287,
+        "model2b": 30.528216533409786
+      }
+    },
+    "s2_praproses_penuh": {
+      "norm_mode": "centered+zscore",
+      "zscore": true,
+      "weights": {
+        "w1": {
+          "hsv": 0.3,
+          "hog": 0.7,
+          "hu": 0.0
+        },
+        "w2": {
+          "hsv": 0.3,
+          "hog": 0.7,
+          "hu": 0.0,
+          "lbp": 0.0
+        },
+        "w2m": {
+          "hsv": 0.2,
+          "hog": 0.6,
+          "hu": 0.1,
+          "lbp": 0.1
+        }
+      },
+      "val_mAP_strict": {
+        "model1": 34.54651262574409,
+        "model2": 34.54651262574409,
+        "model2b": 33.78111994764443
+      }
+    }
+  }
+}
